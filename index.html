@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>leaflet-sidebar example</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <link rel="stylesheet" href="assets/L.Control.Sidebar.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" /><![endif]-->
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body, #map {
+            height: 100%;
+        }
+
+        .lorem {
+            font-style: italic;
+            color: #AAA;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h1>Projektname</h1>
+
+        <p class="lorem">Hier könnte der Projekttext stehen</p>
+
+        Hier noch Fotos und Videos hin.
+    </div>
+
+    <div id="map"></div>
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="assets/L.Control.Sidebar.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <script>
+        var map = L.map('map', {
+            center: [-0.8788717828324148, 29.003906249999996],
+            zoom: 3,
+            minZoom: 3
+        });
+
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        var sidebar = L.control.sidebar('sidebar', {
+            closeButton: true,
+            position: 'left'
+        });
+        map.addControl(sidebar);
+
+        // setTimeout(function () {
+        //     sidebar.show();
+        // }, 500);
+
+        // var marker = L.marker([51.2, 7]).addTo(map).on('click', function () {
+        //     sidebar.toggle();
+        // });
+
+        var khartum = L.marker([15.566159,32.531097]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var nairobi = L.marker([-1.279114,36.822631]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var kapstadt = L.marker([-33.898917,18.429351]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var dodoma = L.marker([-6.169398,35.742447]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var kampala = L.marker([0.321005,32.582306]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var karohk = L.marker([34.485759,62.588497]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var kabul = L.marker([34.542197,69.174621]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var hanoi = L.marker([21.036922,105.849811]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var sanisidro = L.marker([9.373193,-83.706406]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var saopaulo = L.marker([-23.518663,-46.635804]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var muenster = L.marker([51.972192,7.623718]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var cologne = L.marker([50.947613,6.961792]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var datteln = L.marker([51.650833,7.335037]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var munich = L.marker([48.145472,11.581542]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        var prrenjas = L.marker([41.072266,20.548633]).addTo(map).on('click', function () {
+            sidebar.toggle();
+        });
+
+        map.on('click', function () {
+            sidebar.hide();
+        })
+    </script>
+</body>
+</html>
