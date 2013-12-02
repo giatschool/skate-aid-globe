@@ -21,10 +21,8 @@ map.on('click', function () {
 });
 
 function onEachFeature(feature, layer) {
-    
-    layer.on('click', function (){
-        sidebar.show();
-    });
+
+    layer.on('click', locationClick);
 }
 
 
@@ -33,3 +31,22 @@ var skateaid = L.geoJson(skateaidlocations, {
     onEachFeature: onEachFeature,
 
 }).addTo(map);
+
+
+function locationClick(feature){
+    console.log(feature);
+
+    var title = document.getElementById('title');
+    title.innerHTML = feature.target.feature.properties.location;
+
+    sidebar.show();
+
+}
+
+$(function() {
+    $('#slides').slidesjs({
+        width: 940,
+        height: 528,
+        navigation: false
+    });
+});
