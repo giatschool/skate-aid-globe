@@ -13,7 +13,8 @@ html, body, #map {
 }
 
 #slides {
-    display: none
+    display: none;
+    margin-top: 20px;
 }
 
 #slides .slidesjs-navigation {
@@ -73,4 +74,11 @@ html, body, #map {
 
 .navbar {
     overflow: hidden
+}
+
+.table tbody > tr > td, .table tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #dddddd;
 }

@@ -4,7 +4,11 @@ var skateaidlocations = {
         {
             "type": "Feature",
             "properties": {
-                "location": "Khartum"
+                "location": "Khartum",
+                "country": "Sudan",
+                "description": "Erste Skateboardworkshops für Kinder und Jugendliche",
+                "partner": "Goethe Institut, Jugendzentrum Al-Sajjana, Makaan Arts & Culture",
+                "start": "2013"
             },
             "geometry": {
                 "type": "Point",
@@ -13,7 +17,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Nairobi"
+                "location": "Nairobi",
+                "country": "Kenia",
+                "description": "Bau einer multifunktionalen Sportanlage für Skateboarding",
+                "partner": "Skateboarding Society of Kenya, Shangilia Deutschland e.V., Dirk Nowitzki Stiftung",
+                "start": "2009"
             },
             "geometry": {
                 "type": "Point",
@@ -22,7 +30,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Kapstadt"
+                "location": "Kapstadt",
+                "country": "Südafrika",
+                "description": "Bau eines Skateparks | Bau einer Minirampe | Bau transportabler Rampen",
+                "partner": "Sentinel Boardriders | Salesianer Institut Don Bosco",
+                "start": "2008"
             },
             "geometry": {
                 "type": "Point",
@@ -31,7 +43,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Dodoma"
+                "location": "Dodoma",
+                "country": "Tansania",
+                "description": "Bau eines Betonskateparks",
+                "partner": "Don Bosco",
+                "start": "2011"
             },
             "geometry": {
                 "type": "Point",
@@ -40,7 +56,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Kampala"
+                "location": "Kampala",
+                "country": "Uganda",
+                "description": "Renovierung und Erweiterung der bestehenden Skateboardanlage",
+                "partner": "Uganda Skateboard Union",
+                "start": "2010"
             },
             "geometry": {
                 "type": "Point",
@@ -49,7 +69,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Karohk"
+                "location": "Karokh",
+                "country": "Afghanistan",
+                "description": "Bau einer Sportanlage für Skateboarding",
+                "partner": "Grünhelme e.V.",
+                "start": "2009"
             },
             "geometry": {
                 "type": "Point",
@@ -58,7 +82,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Kabul"
+                "location": "Kabul",
+                "country": "Afghanistan",
+                "description": "Bau einer Miniramp, Bau eines Skateparks",
+                "partner": "Sound Central Festival",
+                "start": "2013-2014"
             },
             "geometry": {
                 "type": "Point",
@@ -67,7 +95,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "San Isidro"
+                "location": "San Isidro de El General",
+                "country": "Costa Rica",
+                "description": "Bau einer Sportanlage für Skateboarding",
+                "partner": "Pura Vida Skateboarding & Vida Nueva",
+                "start": "2012"
             },
             "geometry": {
                 "type": "Point",
@@ -76,7 +108,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Hanoi"
+                "location": "Hanoi",
+                "country": "Vietnam",
+                "description": "Unterstützung der Arbeit von Frido Meyer-Knees",
+                "partner": "Hai Duong Kinderheim",
+                "start": "2009-2010"
             },
             "geometry": {
                 "type": "Point",
@@ -85,7 +121,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Sao Paulo"
+                "location": "Sao Paulo",
+                "country": "Brasilien",
+                "description": "Freizeitangebot für Kinder und Jugendliche",
+                "partner": "ONG Social Skate",
+                "start": "2013"
             },
             "geometry": {
                 "type": "Point",
@@ -94,7 +134,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Münster"
+                "location": "Münster",
+                "country": "",
+                "description": "",
+                "partner": "",
+                "start": ""
             },
             "geometry": {
                 "type": "Point",
@@ -103,7 +147,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Köln"
+                "location": "Köln",
+                "country": "Deutschland",
+                "description": "Unterstützung der Arbeit der „Glashütte“",
+                "partner": "Jugend- und Gemeinschaftszentrum Glashütte",
+                "start": ""
             },
             "geometry": {
                 "type": "Point",
@@ -112,7 +160,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Datteln"
+                "location": "Datteln",
+                "country": "Deutschland",
+                "description": "Bau einer Skatebowl an der Vestischen Kinder- und Jugendklinik",
+                "partner": "Vestische Kinder- und Jugendklinik",
+                "start": "2011"
             },
             "geometry": {
                 "type": "Point",
@@ -121,7 +173,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "München"
+                "location": "München",
+                "country": "Deutschland",
+                "description": "Unterstützung des Projekts „ACROSS THE  BOaRDERS“ - Sport für junge Flüchtlinge",
+                "partner": "Brick e.V.",
+                "start": "2012"
             },
             "geometry": {
                 "type": "Point",
@@ -130,7 +186,11 @@ var skateaidlocations = {
         },{
             "type": "Feature",
             "properties": {
-                "location": "Prrenjas"
+                "location": "Prrenjas",
+                "country": "Albanien",
+                "description": "Skateboardunterricht für Kinder und Jugendliche",
+                "partner": "Kampi Pa Emer, Peace Corps",
+                "start": "2013"
             },
             "geometry": {
                 "type": "Point",
