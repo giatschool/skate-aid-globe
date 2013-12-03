@@ -31,25 +31,6 @@ var skateaid = L.geoJson(skateaidlocations, {
 
 }).addTo(map);
 
-function locationClick(feature){
-
-    var title = document.getElementById('title');
-    var country = document.getElementById('country');
-    var description = document.getElementById('description');
-    var partner = document.getElementById('partner');
-    var begin = document.getElementById('begin');
-
-    var where = feature.target.feature.properties.country + ", " + feature.target.feature.properties.location
-
-    title.innerHTML = feature.target.feature.properties.location;
-    country.innerHTML = where;
-    description.innerHTML = feature.target.feature.properties.description;
-    partner.innerHTML = feature.target.feature.properties.partner;
-    begin.innerHTML = feature.target.feature.properties.start;
-
-    sidebar.show();
-}
-
 $(function() {
     $('#slides').slidesjs({
         width: 940,
@@ -57,3 +38,51 @@ $(function() {
         navigation: false
     });
 });
+
+function locationClick(feature){
+    console.log("asd");
+
+    // $('#slides').remove();
+
+    // $('#sidebar').append('<div id="slides></div>"');
+
+    var title = document.getElementById('title');
+    var country = document.getElementById('country');
+    var description = document.getElementById('description');
+    var partner = document.getElementById('partner');
+    var begin = document.getElementById('begin');
+
+    var where = feature.target.feature.properties.country + ", " + feature.target.feature.properties.location;
+
+    title.innerHTML = feature.target.feature.properties.location;
+    country.innerHTML = where;
+    description.innerHTML = feature.target.feature.properties.description;
+    partner.innerHTML = feature.target.feature.properties.partner;
+    begin.innerHTML = feature.target.feature.properties.start;
+
+    if (feature.target.feature.properties.images[0] != "") {
+        $( "#image1" ).attr( "src", feature.target.feature.properties.images[0] );
+    }
+
+    if (feature.target.feature.properties.images[1] != "") {
+        $( "#image2" ).attr( "src", feature.target.feature.properties.images[1] );   
+    }
+
+    if (feature.target.feature.properties.images[2] != "") {
+        $( "#image3" ).attr( "src", feature.target.feature.properties.images[2] );
+    }
+
+    sidebar.show();
+}
+
+var logos = L.control({position: 'bottomright'});
+
+logos.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend');
+    div.innerHTML = '<div class="skateaid"></div>';
+
+    return div;
+};
+
+// logos.addTo(map);
