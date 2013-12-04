@@ -4,10 +4,43 @@ var map = L.map('map', {
     minZoom: 3
 });
 
+var crossIcon = L.icon({
+    iconUrl: 'img/cross.png',
+
+    iconSize:     [25, 25], // size of the icon
+    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
+});
+
 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: 'Map data &copy; OpenStreetMap contributors'
 }).addTo(map);
+
+var fullExtent = L.control({position: 'topleft'});
+
+fullExtent.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info extent');
+
+    //stop and catch events that happen on the slider div
+    var stop = L.DomEvent.stopPropagation;
+
+    L.DomEvent.on(div,'click',function(){
+        sidebar.hide(); 
+        map.setView([-0.8788717828324148, 29.003906249999996],3);
+    });
+
+    L.DomEvent
+        .on(div, 'click', stop)
+        .on(div, 'mousedown', stop)
+        .on(div, 'dblclick', stop)
+        .on(div, 'click', L.DomEvent.preventDefault);
+
+    div.innerHTML = "<div id='extent'></div>";
+
+    return div;
+}
+
+fullExtent.addTo(map);
 
 var sidebar = L.control.sidebar('sidebar', {
     closeButton: true,
@@ -20,12 +53,25 @@ map.on('click', function () {
     sidebar.hide();
 });
 
+function zoomToFeature(e) {
+    map.setView(e.latlng,12);
+}
+
 function onEachFeature(feature, layer) {
+
+    layer.on({
+        click: locationClick,
+        click: zoomToFeature
+    });
 
     layer.on('click', locationClick);
 }
 
 var skateaid = L.geoJson(skateaidlocations, {
+
+    pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {icon: crossIcon});
+    },
 
     onEachFeature: onEachFeature,
 
@@ -40,11 +86,6 @@ $(function() {
 });
 
 function locationClick(feature){
-    console.log("asd");
-
-    // $('#slides').remove();
-
-    // $('#sidebar').append('<div id="slides></div>"');
 
     var title = document.getElementById('title');
     var country = document.getElementById('country');
