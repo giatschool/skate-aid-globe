@@ -21,7 +21,6 @@ var fullExtent = L.control({position: 'topleft'});
 fullExtent.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info extent');
 
-    //stop and catch events that happen on the slider div
     var stop = L.DomEvent.stopPropagation;
 
     L.DomEvent.on(div,'click',function(){
@@ -121,9 +120,9 @@ var logos = L.control({position: 'bottomright'});
 logos.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
-    div.innerHTML = '<div class="skateaid"></div>';
+    div.innerHTML = '<div class="skateaid"></div><div class="ifgi"></div>';
 
     return div;
 };
 
-// logos.addTo(map);
+logos.addTo(map);

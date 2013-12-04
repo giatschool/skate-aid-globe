@@ -9,14 +9,20 @@ html, body, #map {
 
 .ifgi {
     background-image: url(../img/ifgi.png);
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
+    background-size: 120px 100px;
+    width: 120px;
+    height: 100px;
 }
 
 .skateaid {
     background-image: url(../img/skateaid.png);
     background-position: center;
     background-repeat: no-repeat;   
+    background-size: 120px 100px;
+    width: 120px;
+    height: 100px;
 }
 
 .info {
